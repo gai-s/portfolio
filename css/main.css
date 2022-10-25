@@ -499,8 +499,10 @@ img {
     padding: 2rem 0 1rem 0; }
   #about-a .about-info {
     grid-template-areas: 'bioimage' 'bio' 'aw1' 'aw2' 'aw3'; }
-    #about-a .about-info .bio {
+    #about-a .about-info .bio, #about-a .about-info .bio-image {
       margin: auto; }
+    #about-a .about-info .bio-image {
+      padding-right: 0; }
   #about-c {
     display: none; }
   #contact-a .text-fields {
