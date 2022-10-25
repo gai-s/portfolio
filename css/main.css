@@ -346,7 +346,7 @@ img {
 
 #about-c .about-logos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 2rem;
   margin: auto; }
   #about-c .about-logos img {
@@ -462,7 +462,9 @@ img {
   #header-home {
     height: 30rem; }
     #header-home .header-content {
-      padding-top: 5rem; } }
+      padding-top: 5rem; }
+  #about-c {
+    display: none; } }
 
 @media (max-width: 720px) {
   .items {
