@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/93fcf75ed7.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Contact Me | Full Stack developer</title>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header-inner">
+    <div class="container">
+      <nav id="main-nav">
+        <img src="img/logo.png" alt="My profolio" id="logo">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html" class="current">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section A: Contact From -->
+  <section id="contact-a" class="text-center py-3">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">Here is how you can reach me</p>
+      <form>
+        <div class="text-fields">
+          <input type="text" class="text-input name-input" placeholder="Name">
+          <input type="text" class="text-input subject-input" placeholder="Subject">
+          <input type="email" class="text-input email-input" placeholder="Email Address">
+          <input type="text" class="text-input phone-input" placeholder="Phone Number">
+          <textarea class="text-input message-input" placeholder="Enter Message"></textarea>
+        </div>
+        <button type="submit" class="btn-dark">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Section B: Contact Info -->
+<section id="contact-b" class="py-3 bg-dark">
+  <div class="container">
+    <div class="contact-info">
+      <div>
+        <a href="mailto:sgaishab@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+        <h3>Email</h3>
+        <p>sgaishab@gmail.com
+      </div>
+      <div>
+        <a href="tel:+972-526742114" target="_blank"><i class="fas fa-phone fa-3x"></i></a>
+        <h3>Phone</h3>
+      </div>
+      <div>
+        <i class="fas fa-address-card fa-2x"></i>
+        <h3>Residence</h3>
+        <p>Tel Aviv area
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section C: Tagline -->
+<section id="contact-c" class="bg-main py-4">
+  <div class="container">
+    <h1>For further information, don't hesitate to contact me</h1>
+  </div>
+</section>
+
+<!-- Floating watsapp icon -->
+<a class="floating_watsapp" href="https://api.whatsapp.com/send?phone=972526742114" target="_blank">
+  <i class="fa-brands fa-whatsapp fa-4x fa-beat-fade"></i></a>
+
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content container">
+      <p>Copyright &copy; 2022.  All RIghts Reserved, GS</p>
+      <div class="social">
+        <a href="https://github.com/gai-s" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:sgaishab@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/gai-shabtay-ba712217a/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.facebook.com/gai.shabtay" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let form = document.querySelector('form');
+    form.addEventListener("submit", onSubmit);
+    function onSubmit(e) {
+      e.preventDefault();
+      let name=document.getElementsByClassName("name-input")[0].value;
+      let subject=document.getElementsByClassName("subject-input")[0].value;
+      let phone=document.getElementsByClassName("phone-input")[0].value;
+      let email=document.getElementsByClassName("email-input")[0].value;
+      let message=document.getElementsByClassName("message-input")[0].value;
+      console.log(`sending email to ${name, email}`);
+      window.open(`mailto:${email}?subject=${subject}&body=message from: ${name}, phone is: ${phone}, content: ${message}`);
+    }
+  </script>
+</body>
+</html>
